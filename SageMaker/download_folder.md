@@ -2,9 +2,6 @@
 
 # How To Use
 1. Launch a console in your notebook
-```
-
-```
 2. Install zip
 ```
 conda install -y -c conda-forge zip
