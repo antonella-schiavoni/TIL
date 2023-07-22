@@ -51,8 +51,8 @@ class Node:
 
 def lca(root, v1, v2):
     """
-    Complexity of this function is O(n) in the worst case, as it may traverse all the
-    nodes in the binary search tree.
+    In this solution we are searching for nodes v1 and v2 from the root node down to the leaves in each recursion.
+    Time complexity in the worst case is O(n), as we might traverse all the nodes in the binary search tree.
     """
 
     # Base case
@@ -79,6 +79,9 @@ def lca_improved(root, v1, v2):
     There is a more efficient way to find the lowest common ancestor (LCA) due to the
     property of BSTs that for any given node, all nodes in the left subtree are smaller
     and all nodes in the right subtree are larger.
+
+    In this solution we traverse the tree from root to the LCA visiting onlu the nodes along one path, so the complexity is reduced.
+    Time complexity for this case is O(h), being h the height of the tree.
     """
 
     # Base case
