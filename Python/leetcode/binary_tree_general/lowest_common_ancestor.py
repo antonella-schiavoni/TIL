@@ -6,14 +6,18 @@
 #         self.left = None
 #         self.right = None
 
-class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        if not root or root == p or root == q:
-            return root
 
-        l = self.lowestCommonAncestor(root.left, p, q)
-        r = self.lowestCommonAncestor(root.right, p, q)
-
-        if l and r:
-            return root
-        return l or r
+def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    """
+    For a Binary Tree (not necessarily a Binary Search Tree). 
+    This logic does not use the properties of BST, so it needs to search in both left and right subtrees before determining the LCA.
+    """
+    if not root or root == p or root == q:
+        return root
+    
+    l = self.lowestCommonAncestor(root.left, p, q)
+    r = self.lowestCommonAncestor(root.right, p, q)
+    
+    if l and r:
+        return root
+    return l or r
