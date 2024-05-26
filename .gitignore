@@ -14,3 +14,6 @@ ENV/
 
 # Ignore Jupyter notebook checkpoint files
 .ipynb_checkpoints
+
+# Ignore .idea folder
+.idea/
